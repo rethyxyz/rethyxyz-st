@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "BigBlue TerminalPlus:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Monospace:size=11:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -205,6 +205,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ MODKEY,               XK_k,			kscrollup,      {.i = -1} },
 	{ MODKEY,               XK_j,		    kscrolldown,    {.i = -1} },
+    { MODKEY,               XK_a,           changealpha,    {.f = +0.05} },
+    { MODKEY,               XK_x,           changealpha,    {.f = -0.05} },
 };
 
 /*
