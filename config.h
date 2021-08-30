@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Monospace:pixelsize=14:antialias=true:autohint=true";
-static int borderpx = 3;
+static char *font = "Terminus (TTF):pixelsize=14:antialias=true:autohint=true";
+static int borderpx = 1;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -94,7 +94,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.95;
+float alpha = 0.99;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -205,8 +205,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ MODKEY,               XK_k,			kscrollup,      {.i = -1} },
 	{ MODKEY,               XK_j,		    kscrolldown,    {.i = -1} },
-    { MODKEY,               XK_a,           changealpha,    {.f = +0.05} },
-    { MODKEY,               XK_x,           changealpha,    {.f = -0.05} },
+    { MODKEY,               XK_a,           changealpha,    {.f = +0.01} },
+    { MODKEY,               XK_x,           changealpha,    {.f = -0.01} },
 };
 
 /*
